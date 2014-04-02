@@ -1,0 +1,14 @@
+{
+  "dev": true,
+  "twitter":{
+      "consumer_key":        "YOUR KEY",
+      "consumer_secret":     "YOUR KEY",
+      "access_token":        "YOUR KEY",
+      "access_token_secret": "YOUR KEY" 
+  },
+  "public" : {
+    "ga": {
+      "account":           "UA-XXXXXX-X"
+    }
+  }
+}
