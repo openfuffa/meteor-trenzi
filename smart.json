@@ -1,0 +1,13 @@
+{
+  "packages": {
+    "iron-router": {},
+    "nprogress": {},
+    "collection2": {},
+    "bootstrap-3": {},
+    "bootstrap3-less": {},
+    "streams": {},
+    "twit": {},
+    "shareit": {},
+    "GAnalytics": {}
+  }
+}

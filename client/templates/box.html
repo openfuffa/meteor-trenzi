@@ -1,0 +1,91 @@
+<template name="box">
+<div class="box row">
+    <!-- sx -->
+    <div class="col-sm-6" style="background-color: yellow;">
+      <div class="row">
+        <div class="col-sm-12">
+          <h2><i class="glyphicon glyphicon-fire"></i> Top 10 hashtag</h2>
+
+      {{#each topTweetsList}}
+        <p style="{{ color }}"><i data-counter="{{ counter }}" class="glyphicon {{ trend }}"></i> #{{ hashtag }}</p>
+      {{ else }}
+        <p>Non ci sono hashtag in classifica riprova più tardi</p>
+      {{/each}}
+
+        </div>
+      </div>
+
+      <div class="row" style="background-color:green;">
+        <div class="col-sm-12">
+          <h2><i class="glyphicon glyphicon-time"></i> Ultimi 10 hashtag</h2>
+
+      {{#each recentHashtagList}}
+        <p> #{{ hashtag }} ({{counter}})</p>
+      {{ else }}
+        <p>Non ci sono hashtag in classifica riprova più tardi</p>
+      {{/each}}
+
+        </div>
+      </div>
+    </div>
+  
+    <!-- dx -->
+    <div class="col-sm-6" style="background-color: red;">
+
+      <div class="row" style="background-color:#eee;">
+        <div class="col-sm-12">
+          <h2>Cos'é #TRENZI?</h2>
+          <span class="prebeta">pre-BETA (aka alpha)</span>
+          <p>#trenzi è un progetto <a class="btn btn-xs btn-default"  href="http://grigio.org/opendata?tz">#openfuffa</a>, per sensibilizzare giornalisti e politici sull'importanza dei <span style="background-color:yellow;">"veri" #opendata</span>.</p>
+
+<iframe allowtransparency="true" frameborder="0" scrolling="no"
+        src="https://platform.twitter.com/widgets/tweet_button.html?url=trenzi.meteor.com&text=trenzi%20http://trenzi.meteor.com"
+        style="width:130px; height:20px;"></iframe>
+
+<p>
+  <iframe src="//www.facebook.com/plugins/like.php?href=http%3A%2F%2Ftrenzi.meteor.com&amp;width&amp;layout=button_count&amp;action=like&amp;show_faces=false&amp;share=false&amp;height=21&amp;appId=408259972603924" scrolling="no" frameborder="0" style="border:none; overflow:hidden; height:21px;" allowTransparency="true"></iframe>
+
+</p>
+
+        </div>
+      </div>
+
+      <div class="box-numbers row">
+        <div class="col-sm-12">
+          <h2>Numero di tweet</h2>
+          <p style="font-size: 90px;letter-spacing: -6px;line-height: 50px;">
+          {{ counterTweets }}  </p>
+          <p>nell'ultima ora <i class="glyphicon glyphicon-time"></i> {{ counterTweetsSec }} tweet/s</p>
+            <h2 style="margin-top: -10px;">Volume di tweet</h2>
+            <div class="rotate-bars">
+              <span class="hour-slot">{{ hourSlot }}</span>
+              {{#each volumeList}}
+                <div class="progress {{#if isLunch}} highlight {{/if}}">
+                  <div class="progress-bar" data-counter="{{ counter }}" data-hour="{{getHour}}" style="width: {{counterScaled}}%">
+                  </div>
+                </div>
+              {{ else }}
+                <p>N/A</p>
+              {{/each}}
+              
+          </div>
+
+          <h2 style="margin-top: 0px;">Mancano al 2018</h2>
+          <p style="font-size: 90px;letter-spacing: -6px;line-height: 50px;">
+          {{ counterDays }}</p>
+          <p>giorni a partire da oggi.</p>
+        </div>
+      </div>
+  
+      <h2>ultime news</h2>
+
+      {{#each recentLinkList}}
+        <p><a target="_blank" href="{{url}}">{{ urlTrim }}</a> ({{ counter }})</p>
+      {{ else }}
+        <p>Non ci sono link in classifica riprova più tardi</p>
+      {{/each}}
+
+    </div>
+
+  </div> <!-- box -->
+</template>

@@ -1,0 +1,28 @@
+<template name="tweetList">
+
+<h2>Ultimi tweets</h2>
+
+  {{#each tweets}}
+
+    <div class="media">
+      <a class="pull-left" href="#">
+        <img class="media-object" src="{{img_url}}" style="width: 64px; height: 64px;">
+      </a>
+      <div class="media-body">
+        <a href="https://twitter.com/{{ user }}">{{ user }}</a>
+        <span style="font-size: 75%;color:lightslategray;">
+          alle {{ formatTime time }}
+        </span><br>
+        {{ text }}
+      </div>
+    </div>
+
+  {{else}}
+
+    <p>Nessun tweet pervenuto, aspetta qualche minuto.</p>
+
+  {{/each}}
+
+    <hr class="half-rule">
+
+</template>

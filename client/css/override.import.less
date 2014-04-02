@@ -1,0 +1,199 @@
+/*
+       Global
+*/
+
+.bs-docs-masthead, .bs-docs-header {
+position: relative;
+padding: 30px 15px;
+color: #cdbfe3;
+text-align: center;
+text-shadow: 0 1px 0 rgba(0,0,0,.1);
+background-image: url(/assets/images/cover.jpg);
+background-size: 100%;
+background-position: center center;
+/*background-repeat: no-repeat;*/
+/*background-color: #6f5499;
+background-image: -webkit-linear-gradient(top,#563d7c 0,#6f5499 100%);
+background-image: linear-gradient(to bottom,#563d7c 0,#6f5499 100%);
+background-repeat: repeat-x;
+filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#563d7c', endColorstr='#6F5499', GradientType=0);*/
+}
+
+
+.btn-outline-inverse {
+color: #fff;
+background-color: transparent;
+border-color: #cdbfe3;
+}
+
+.btn-lg, .btn-group-lg>.btn {
+padding: 10px 16px;
+font-size: 18px;
+line-height: 1.33;
+border-radius: 6px;
+}
+
+body {
+  font-family: 'Montserrat', sans-serif;
+}
+
+h2 {
+  .glyphicon {
+    zoom: 0.8;
+  }
+}
+
+/*
+      Cover
+*/
+.cover h1 {
+  color: white; // @my-orange;
+  font-weight: 400;
+  font-family: 'Montserrat', sans-serif;
+  text-shadow: rgba(0, 0, 0, 0.9) 0px 1px 4px;
+  height:4em;
+}
+
+/*
+  .main-container
+*/
+.main-container {
+  color: #e4e3e3;
+  background-color: @my-dark-gray;
+}
+
+/*
+  .box
+*/
+.box {
+  color: @my-dark-gray;
+
+  a {
+    color: #082B49;
+  }
+
+  h2 {
+    font-weight: 600;
+    letter-spacing: -3px;
+    text-transform: uppercase;
+  }
+  .box-numbers {
+    background-color: @my-light-gray;
+  }
+  .progress {
+    height: 3px;
+    margin-bottom: 4px;
+    background-color: inherit;
+  }
+
+  .highlight {
+    background-color: #BDBDBD;
+  }
+
+  .progress-bar {
+    background-color: @my-dark-gray;
+  }
+
+  .progress:nth-of-type(1){
+    .progress-bar{
+      background-color:  #9B6432;
+    }
+  }
+
+  .rotate-bars {
+    -webkit-transform: rotate(270deg);
+    transform: rotate(270deg);
+    -ms-transform: rotate(270deg); /* IE 9 */
+    -o-transform: rotate(270deg); /* Opera */
+    -moz-transform: rotate(270deg); /* Firefox */
+/*    margin-left: 45px;
+    margin-top: -50px;
+    margin-bottom: -55px;*/
+/*    position: absolute;
+    margin-top: -70px;
+    margin-left: 70px; */
+/*    height: 2px;
+    margin: 1px;*/
+    height: 45px;
+    width: 50px;
+  }
+
+  .hour-slot {
+    font-size: 18px;
+  }
+
+  .glyphicon glyphicon-chevron-up {
+    color: green;
+  }
+  .glyphicon glyphicon-chevron-down {
+    color: red;
+  }
+
+/*  .glyphicon-pause {
+    color:black;
+  }*/
+
+  .glyphicon-certificate {
+    color: orange;
+  }
+  .prebeta {
+    background-color: yellow;
+    margin-top: -50px;
+    float: right;
+    -webkit-transform: rotate(30deg);
+    transform: rotate(30deg);
+    -ms-transform: rotate(30deg); /* IE 9 */
+    -o-transform: rotate(30deg); /* Opera */
+    -moz-transform: rotate(30deg); /* Firefox */
+    margin-right: -50px;
+    font-size: 18px;
+    padding: 4px;
+    font-family: monospace;
+    font-weight: 600;
+    color: black;
+    text-transform: uppercase;
+  }
+  
+}
+
+/*
+  Testimonial
+*/
+
+.testimonial {
+  .glyphicon {
+    font-size: 10em;
+  }
+  .highlight {
+    background-color:gray;
+  }
+  .author {
+    color:#777;
+    font-style: italic;
+    font-size: small;
+  }
+}
+
+/*
+   Loading
+*/
+
+@-webkit-keyframes rotating {
+    from{
+        -webkit-transform: rotate(0deg);
+    }
+    to{
+        -webkit-transform: rotate(360deg);
+    }
+}
+
+.rotating {
+    -webkit-animation: rotating 2s linear infinite;
+}
+
+.loading {
+  padding: 50px 10px;
+  font-size: 20px;
+  margin-left: 5%;
+}
+
