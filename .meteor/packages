@@ -6,7 +6,6 @@
 standard-app-packages
 less
 bootstrap3-less
-insecure
 streams
 twit
 GAnalytics

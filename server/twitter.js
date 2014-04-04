@@ -12,6 +12,11 @@ Meteor.startup(function() {
     track: "renzi"
   });
 
+  // anybody can read the tweet stream
+  locStream.permissions.read(function(eventName) {
+    return true;
+  });
+
   stream.on("tweet", function(tweet) {
     var img, img_url, text, time, userName, userTweet;
 
