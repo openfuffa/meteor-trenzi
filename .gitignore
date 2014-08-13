@@ -19,3 +19,5 @@ dump/*
 
 settings.json
 settings.local.json
+
+.meteor/identifier
